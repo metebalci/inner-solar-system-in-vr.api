@@ -21,7 +21,6 @@ class AtTheMoment(Base):
         res = cache.get('at_the_moment')
         if res is None:
             res = {
-                'version': 2,
                 'current': {
                     'sun': api.get_current_position('sun'),
                     'mercury': api.get_current_position('mercury'),
@@ -53,7 +52,6 @@ class LastDays(Base):
         res = cache.get('last_days_%d' % days)
         if res is None:
             res = {
-                'version': 2,
                 'sun': api.get_positions('sun', -days, 1, 4),
                 'mercury': api.get_positions('mercury', -days, 1, 4),
                 'venus': api.get_positions('venus', -days, 1, 4),
