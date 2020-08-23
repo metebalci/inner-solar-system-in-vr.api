@@ -2,7 +2,7 @@
 download:
 	./downloadbsp.sh satellites jup310
 
-deploy: latest_leapseconds.tls spp_nom_20180812_20250831_v037_R04.bsp
+deploy: latest_leapseconds.tls spp_nom_20180812_20250831_v037_RO4.bsp
 	gcloud app deploy
 
 show_logs:
