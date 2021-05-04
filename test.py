@@ -1,4 +1,9 @@
 import api
+from tornado.log import enable_pretty_logging
+
+
+enable_pretty_logging()
+
 
 if __name__ == "__main__":
 

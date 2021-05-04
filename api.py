@@ -1,16 +1,17 @@
-from skyfield.api import Loader
+from skyfield.api import Loader, load
 from skyfield.data import mpc
 from skyfield.constants import GM_SUN_Pitjeva_2005_km3_s2 as GM_SUN
 import spiceypy as spice
 from datetime import datetime, timedelta
 
-load = Loader('/tmp')
+# de421.bsp is also provided offline
+# load = Loader('/tmp')
 
 # loads ephemeris files over internet
 planets = load('de421.bsp')
 
-# use the one downloaded to /tmp
-spice.furnsh('/tmp/de421.bsp')
+# source: ftp://ssd.jpl.nasa.gov/pub/eph/planets/bsp/de421.bsp
+spice.furnsh('de421.bsp')
 # source: https://naif.jpl.nasa.gov/pub/naif/generic_kernels/lsk/latest_leapseconds.tls
 spice.furnsh('latest_leapseconds.tls')
 # source: https://sppgway.jhuapl.edu/lpredict_ephem
