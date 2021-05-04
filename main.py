@@ -29,7 +29,6 @@ class AtTheMoment(Base):
                     'moon': api.get_current_position('moon'),
                     'mars': api.get_current_position('mars'),
                     'jupiter': api.get_current_position('jupiter barycenter'),
-                    'neowise': api.get_mpc_current_position('C/2020 F3 (NEOWISE)'),
                     'psp': api.get_psp_current_position()
                 },
                 'positions': {
@@ -38,7 +37,6 @@ class AtTheMoment(Base):
                     'earth': api.get_positions('earth', -182, 183),
                     'moon': api.get_positions('moon', -15, 16),
                     'mars': api.get_positions('mars', -343, 344),
-                    'neowise': api.get_mpc_positions('C/2020 F3 (NEOWISE)'),
                     'psp': api.get_psp_positions(-60, 61, 24)
                 }
             }

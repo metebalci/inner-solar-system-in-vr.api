@@ -1,5 +1,5 @@
-skyfield==1.23
-pandas==1.0.5
-spiceypy==3.1.1
+skyfield==1.39
+pandas==1.2.4
+spiceypy==4.0.0
 cachelib==0.1.1
 tornado==6.0.4

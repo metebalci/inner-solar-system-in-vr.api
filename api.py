@@ -17,10 +17,11 @@ spice.furnsh('latest_leapseconds.tls')
 spice.furnsh('spp_nom_20180812_20250831_v037_RO4.bsp')
 
 # load minor planets/comets database over internet
-with load.open(mpc.COMET_URL) as f:
-    comets = mpc.load_comets_dataframe(f)
+# not need since neowise is not shown anymore
+#with load.open(mpc.COMET_URL) as f:
+#    comets = mpc.load_comets_dataframe(f)
 
-comets = comets.set_index('designation', drop=False)
+# comets = comets.set_index('designation', drop=False)
 
 # loads time scale files over internet
 ts = load.timescale()
